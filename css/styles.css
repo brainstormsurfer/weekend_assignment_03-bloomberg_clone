@@ -1,0 +1,823 @@
+@import "../src/assets/fonts/fonts.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======  HEADER   ======= */
+
+header {
+    background-color:#000;
+    height: 100px;
+    width: 100vw;
+}
+
+header .container-header {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    height: 100px;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+header .container-nav-bloomberg {
+    display: flex;
+    height: 30px;
+    width: 100%;
+}
+
+header .container-nav-bloomberg .nav-bloomberg  ul{
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+    gap: 2em;
+    /* margin-left: 15px; */
+}
+
+header .container-nav-bloomberg .nav-bloomberg ul li{
+    display: flex;
+    height:12px;
+}
+
+header .container-logo-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;    
+    padding: 11px 9px 9px 15px;
+}
+
+header .container-left_logo {
+    display: flex;
+    justify-content: flex-start;
+    height: 36px;
+    width: 178px;
+    background-image: url('../src/assets/img/bb-logo-178x36.jpg');
+}
+
+header .container-right_form-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 354px;
+    height: 30px;
+}
+
+header .container-right_form-nav .container-menu-area{
+    display: flex;
+    justify-content: space-around;
+    width: 127px;
+    height: 19px;
+}
+
+header .container-right_form-nav .btn-sign-in {
+    display: flex;
+    justify-content: space-around;
+    width: 44.53px;
+    height: 28px;
+}
+
+header .container-right_form-nav .btn-search {
+    display: flex;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+}
+
+header .container-right_form-nav .btn-search img {
+    width: 19px;
+    height: 19px;
+}
+
+header .container-right_form-nav .btn-subscribe {
+    width: 93.91px;
+    height: 30px;
+    padding: 7px 14px;
+    font-weight: bold;
+    text-align: center;
+    /* margin-left: 15px; */
+}
+
+header .container-right_form-nav .menu-hamburger {
+   display: none;
+}
+
+
+/* =====  MAIN TOP - NAVBARS  ===== */
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width:1200px;
+}
+
+ main .container-topix-menus{
+    display: flex;
+    height: 74px; 
+    font-size: 14px;  
+    align-items: center;
+}
+
+ .container-navs .container-topix-menus .topix-menu {
+    display: flex;
+    flex-grow: 1;
+}
+
+.main-navs .stocks-navbar {
+    display: flex;
+    height: 31.48px;
+}
+
+main ul {
+    list-style: none;
+}
+
+a { 
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover { 
+    text-decoration: underline;
+}
+
+
+.container-navs .stocks-carousel {
+    display: flex;
+    overflow-x: hidden;
+}
+
+/* =====  MAIN TOP - CONTENT  ===== */
+
+.main-flex-wrapper {
+    display: flex;
+}
+
+.main-container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr) 2fr;
+    grid-template-rows: repeat(5, auto);
+    padding: 20px 14px;
+    grid-gap: 1em;
+}
+
+.main-container .container-main-top {
+    grid-area: 1 / 1 / 2 / 7;
+    display: flex;
+    height: 265px;
+    grid-gap: 1em;
+}   
+
+.container-main-top .img-container {
+    grid-area: 1 / 3 / 3 / 7;
+    display: flex;
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iEXuynkyxC_4/v0/480x320.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;     
+    min-width: 330px;
+    height: 256px;
+}   
+
+.container-main-top .container-headlines {
+    grid-column: 3 / 7;
+    display: flex;
+    flex-direction: column;
+    height: 225px;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(2 1fr);
+}
+
+.container-main-top h1 {
+    display: flex;
+    flex-grow: 1;
+    font-size: 46px;
+    height: 85px;
+}   
+
+.container-main-top ul {
+    display: flex;            
+    grid-column-gap: 1em;
+    height: 70.56px;
+    margin: 30px 0 10px;
+    font-size: 20px;    
+}   
+
+.container-main-top .headlines li {
+    display: flex;    
+    flex-grow: 1;
+    justify-content: flex-start;
+    height: 70.56px;
+    width: 191px;
+    font-size: 16px;    
+}   
+
+.container-main-top .headlines li a {
+    display: flex;    
+    height: 57px;
+    width: 154px;
+    font-size: 16px;    
+}   
+
+.headlines-sm, .update {
+    font-size: 12px;
+}
+
+/* =====  LEFT SIDEBAR - LATEST / MOST-READ ===== */
+
+.container-main-left {
+    display: grid;
+    width: 150px;
+    grid-column: 1 / 2;
+    grid-row: 2 / auto;
+}
+
+.container-main-left li {
+    display: flex;    
+    flex-direction: column;    
+    /* height: max-content; */
+    padding: 10px 0 12px;
+}
+
+.container-main-left h3{
+    font-size: 23px;
+    padding: 6px 0;
+    font-weight: lighter;    
+}
+
+.container-main-left .sidebar-latest h3 {
+    color: red;
+}
+
+.container-main-left .title { 
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.topix {
+    display: flex;
+    font-size: 14px;
+}
+
+.container-main-left li .headline {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+/* =====  MAIN CENTER - CONTENT ===== */
+
+.main-container-center {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 3fr); 
+    grid-row-gap: 1em;
+}
+
+.container-center-flex {
+    background-image: rgba(14, 14, 123, 0.701) no-repeat;
+    display: flex;
+    flex-direction: column;    
+}
+
+.container-center-flex .container-article {
+    display: flex;
+    width: 650px;
+    height: 256px;    
+    grid-column-gap: 1em;
+}
+
+.container-center-flex .container-article-top-or-left{    
+    grid-column: 2 / 4;
+    width: 312px;
+    height: 256px;
+}
+
+.container-center-flex  .img-container {    
+    display: flex;
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ipQks4ZLV8wY/v0/500x375.jpg');
+    background-position: center center;
+    background-size: cover;  
+    background-repeat: no-repeat;   
+    height: 256px;
+}
+
+.container-center-flex .container-article-right-or-bottom {
+    grid-column: 4 / 6;
+    width: 312px;
+    height: 256px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-article-right-or-bottom h2 {
+    font-size:24px;
+    width: 312px;
+    height: 87px;
+    margin-bottom: 1em;
+}   
+
+.container-article-right-or-bottom .headlines-sm {      
+    display: flex;
+    flex-direction: column;
+    height: 409px;
+}
+
+.container-article-right-or-bottom .headlines-sm li { 
+    min-height: 30px;
+    font-size: 14px;
+    padding: 5px 0;
+    flex: 1;
+}   
+
+.container-center-headlines-md {
+    margin-top: 1em;
+    display: grid;     
+    grid-column: 2 / 6;
+    gap: 1em;        
+    padding-bottom: 32px;
+    width: 650px;
+}
+
+.container-center-headlines-md ul{
+    display: flex;
+    align-items: center;
+    /* width: 650px; */
+    height: 165px;    
+    grid-gap: 1em;
+    grid-template-columns: repeat (4, 1fr);
+}   
+
+.container-center-headlines-md li {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100px;
+}   
+
+.container-center-headlines-md a {
+    height: 35.19px;
+    padding: 20px 0;
+}   
+
+/* =====  MAIN CENTER SHOWCASES (visuals) - P1 ===== */
+
+.container-main-showcases-p1 {
+    display: grid;
+    grid-area:  4 / 2 / 5 / 6;
+    width: 475;
+    height: 599px;
+}
+
+.container-main-showcases-p1 ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-bottom:25px;
+    grid-gap: 25px;
+}
+
+.container-main-showcases-p1 li {
+    height: 278px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-bottom:32;
+}
+
+.container-main-showcases-p1 li .topix {
+    margin-top: 5px;
+}
+
+.container-main-showcases-p1 li h4 {
+    margin-bottom: 10px;
+}
+
+.container-main-showcases-p1 li:first-child,  
+.container-main-showcases-p1 li:first-child a  {
+    background-color: #000;
+    color:#fff;
+}
+
+.container-main-showcases-p1 .video-container #background-video {
+    align-self: center;
+    width: 90%;        
+    margin: 0 0 25% 5%;
+}
+
+.container-main-showcases-p1 li .img-1{
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iV0tEenZHWKo/v1/400x300.jpg');
+}
+
+.container-main-showcases-p1 li .img-2{
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ip1v1HilllkY/v3/400x300.jpg');
+}
+
+.container-main-showcases-p1 li .img-3{
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iIQRzJfM.kOg/v1/400x300.jpg');
+}
+
+.container-main-showcases-p1 li .img-4{
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7F9HtB5iZhw/v1/400x300.jpg');
+}
+
+.container-main-showcases-p1 li .img-5{
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMD8suUv0e94/v0/400x300.jpg');
+}
+
+.container-main-showcases-p1 li .img-container {    
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    width: 100%;
+    height: 100%;
+}
+
+/* === RIGHT SIDEBAR - OPINIONS / SUBSCRIBE === */
+.container-main-right {
+    display: grid;
+    height: 176px;
+    grid-area: 2 / 6 / auto / 7;
+    background: rgba(242, 60, 154, 0.701) no-repeat;
+}
+
+.container-main-right .advertise {
+    position: relative;
+    /* width: 300px; */
+    height: 250px;
+    margin-bottom: 25px;
+}
+
+.container-main-right .advertise img[alt]::after {  
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Helvetica', 'Times New Roman', Times, serif;
+        justify-content: center;
+        align-items: center;
+        background-color: #dbdbdb;
+        color: #989898;
+        font-size: 14px;
+        content: attr(alt);
+}
+
+.container-main-right h2,
+.container-main-right span {
+    font: 24px;    
+}
+
+.container-main-right span {
+    color: rgb(22, 52, 222);
+}
+
+.container-main-right .reporter {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====  MAIN CENTER SHOWCASES (visuals) - P1 ===== */
+
+.container-showcases-p2 {
+    max-width: 100%;
+    grid-area: 5 / 1 / 6 / 7;
+    display: grid;
+    padding: 20px 14px;
+    grid-gap: 1em;
+    grid-template-columns: repeat(4 1fr);
+}
+
+/* .container-showcases-flex {
+    display: flex;    
+} */
+
+.container-showcases-p2 ul {
+    display: flex;
+    gap: 1em;   
+}
+
+
+.showcases-p2 li .img-1 {
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2b0APuFgUF8/v1/285x214.jpg');
+}
+
+.showcases-p2 li .img-2 {
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iil3p27QSutw/v1/285x214.jpg');
+}
+
+.showcases-p2 li .img-3 {
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqXmOnGDlRks/v1/285x214.jpg');
+}
+
+.showcases-p2 li .advertise{
+    background-image: url('https://polarcdn-terrax.com/image/v1.0.0/bin/649d3de7a32e68c9500d9e59?v=46692&w=280&h=210&autocrop=1');
+}
+
+.showcases-p2 li {
+    /* height: 307.78px; */
+    display: flex;
+    /* flex-grow: 1; */
+    flex-direction: column;
+    background-position: center center;
+    background-size: cover; 
+    background-repeat: no-repeat;  
+    padding-bottom: 32px;
+    max-width:350px;
+    max-height: 281.85px;
+}
+
+.showcases-p2 li h4 {
+    margin: 5px 0 12px;
+}
+
+.container-showcases-p2 ul li:last-child {
+    background: #e6e6e6;
+    padding: 0 14px;
+}
+
+.showcases-p2 .img-container {
+    display: flex;
+    flex-direction: column;
+    background-position: center center;
+    background-size: cover;
+    /* width: 281.25px; */
+    width: 100%;
+    height: 211.45px;
+    margin-bottom: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/* ?  MEDIA QUERY   */
+/* SMARTPHONE */
+@media only screen and (max-width: 760px) {
+    /* * {
+        border: 1px solid green;  
+    }
+
+    header .container-header {
+        width: 100%;        
+        display: flex;
+        justify-content: space-between;
+        background-color:#000;
+        color: #fff;
+        height: 40px;
+        padding: 8px 15px;
+    }
+
+    .container-nav-bloomberg .nav-bloomberg {
+        display: none;
+    }
+    
+    header .container-right_form-nav .container-menu-area {
+        display: none;
+    }
+    
+    header .container-right_form-nav .sign-in {
+        display: none;
+    }
+
+    header .container-right_form-nav .search {
+        display: none;
+    }
+
+    header .container-left_logo {
+        display: flex;
+        justify-content: flex-start;
+        height: 24px;
+        width: 119px;
+        background-image: url('../src/assets/img/logoBBm-119x24.jpg');
+    }
+
+    header .container-right_form-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 147px;
+    }
+
+
+    header.menu-hamburger {
+        display: flex;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+    } */
+
+/*
+
+    - NOT ON SCREEN - NOS (/different place)
+    - CAPSULATED VERSION - CV
+    - NEW ON SCREEN - 
+
+    .container .nav-bloomberg ul li*4 - NOS
+
+  .container-logo-form - CV :
+  .btn-subscribe
+  hamburger(/X) menu which open (dark mode of):
+  - .menu-area
+  - .sign-in-btn
+  - .container-topics-menus .main-menu
+
+.stocks-navbar
+
+- section .container-main-top - while: (!)
+section .headline ul .headlines:(last-child)
+width: 100%
+
+aside .sidebar-latest - NOS
+aside .sidebar-most-read - NOS
+
+- .container-main-center
+
+- .advertise (new)
+
+-.container-main-center .headlines-md
+
+- .main-footer .video
+
+- .main-footer .headlines-lg
+
+  .advertise
+
+  aside o.sidebar-opinions h2 - NOS
+
+- container-headlines-lg
+
+
+
+*/
+
+}   
+
+
+@media screen and (min-width: 761px) and (max-width: 1020px) {
+
+    
+/*
+===================================================== GOOD! 
+.container-main-center {
+    grid-column: 2 / 7;
+    grid-row: 2 / auto;
+    background-image: rgba(14, 14, 123, 0.701) no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 241.11px;
+    width: 650px;
+    grid-gap: 1em;
+    margin-right: 25px;
+}
+.main-article {
+    display: flex;
+}
+
+.main-article .img-container {    
+    display: flex;
+    background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iC14ZGAvdQeg/v3/480x360.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;     
+    min-width: 312px;
+    height: 234px;
+    margin-right: 1em;
+}   
+
+.main-article .container-headlines {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1em;
+}
+
+.container-main-center h2 {
+    display: flex;
+    font-size: 24px;
+    width: 312.5px;
+    height: 81.52px;
+}   
+
+.container-main-center .headlines {
+    display: flex;
+    width: 791px;
+    height: 85px;
+    margin: 25px 0 10px;
+    justify-content: space-evenly;    
+}   
+
+.container-main-center .headlines li {
+    display: flex;    
+    height: 72px;
+    font-size: 20px;    
+}   
+
+.container-main-center-headlines {
+    display: flex;
+    width: 650px;
+    height: 245px;
+}
+
+.container-main-center-headlines ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: 3 / 4;
+    grid-column-gap: .5em;
+}
+
+.container-main-center-headlines ul li {        
+    width: 156px;
+    height: 217px;    
+    padding-bottom: 32px;
+} 
+===================================================== GOOD! 
+*/
+
+    /* .nav-bloomberg ul li*4
+}
+
+@media screen and (min-width: 1020) and (max-width: 1280px) {
+/* .nav-bloomberg ul li*3
+}
+
+@media screen and (min-width: 1281) {
+    /* .nav-bloomberg ul li*4
+}
+
+@media only screen and (min-width: 810) and (max-width: 1080px) {
+    * {
+        border: 1px solid rgb(128, 0, 122);   
+    }
+
+/*
+
+    - NOT ON SCREEN - NOS (/different place)
+    - CAPSULATED VERSION - CV
+    - NEW ON SCREEN - 
+===================================
+
+  - .container-menu-bloomberg - NOS
+
+  .container-logo-form - CV :
+  .btn-subscribe
+  hamburger(/X) menu which open (dark mode of):
+  - .menu-area
+  - .sign-in-btn
+  - .container-topics-menus .main-menu
+*/
+
+
+
+/*
+  .stocks-navbar
+
+- section .container-main-top
+
+aside .sidebar-latest - NOS
+aside .sidebar-most-read - NOS
+
+- .container-main-center
+- headlines-sm
+- headlines-md
+
+- .main-footer
+
+aside o.sidebar-opinions h2 - NOS
+
+- section .container-headlines-lg
+*/
+
+}   
+
+@media screen and (min-width: 1021px) {
+    /* aside .sidebar-latest
+       aside .sidebar-most-read
+       aside .sidebar-opinions-subscribe
+       */
+     
+}
