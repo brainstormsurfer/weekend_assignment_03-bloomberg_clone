@@ -1,11 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 html {    
@@ -19,6 +19,13 @@ body {
 li {
     list-style: none;
 }
+
+.wrapper {
+    border:#1C1C1C 2px solid;
+    width: 100px;
+    height: 100px;
+}
+
 
 /* ======  HEADER   ======= */
 header {
@@ -37,9 +44,10 @@ header {
     height: 10rem;
     width: 120rem;
     background-color: #1C1C1C;        
-    margin: 0 auto;
-    /* max-width: 120rem; */
+    margin: 0 auto;    
   }
+
+/* ===== HEADER (LEFT) - BLOOMBERG NAV ===== */
 
 header .container-nav-bloomberg {
     height: 30px;
@@ -72,13 +80,16 @@ header .container-nav-bloomberg .nav-bloomberg ul li:nth-child(3){
       clip-path: polygon(0% 0%, 100% 0%, 100% 66.67%, 0% 66.67%);
       overflow: hidden;
         margin-right: .5rem;
+        background-repeat: no-repeat;
+
     }
 
 .svg-arrow {
     background-image: url('../src/assets/svg/arrow_down_fill.svg');
     width: 10px;
-    height: 10px;   
+    height: 10px;       
     margin-left: .5rem;
+    background-repeat: no-repeat;
     }
 
 header .container-logo-form {
@@ -98,6 +109,8 @@ header .container-left_logo {
     width: 17.8rem;
     background-image: url('../src/assets/img/bb-logo-178x36-nobg.png');
 }
+
+/* ===== HEADER (RIGHT) - MENU NAV ===== */
 
 header .container-right_form-nav {
     display: flex;
@@ -171,6 +184,7 @@ header .container-right_form-nav .btn-search::before {
     height: 70%;
     transform: translate(25%, 25%);    
     background-image: url('../src/assets/svg/search.svg');
+    background-repeat: no-repeat;
 }
 
 header .container-right_form-nav .btn-search img {
@@ -185,7 +199,6 @@ header .container-right_form-nav .btn-subscribe {
     border-radius: 7px;
     font-weight: bold;
     text-align: center;
-    /* margin-left: 15px; */
 }
 
 header .container-right_form-nav .menu-hamburger {
@@ -193,57 +206,13 @@ header .container-right_form-nav .menu-hamburger {
 }
 
 
-/* =====  MAIN TOP - NAVBARS  ===== */
-/* 
-main {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    width:100%;
-}
-
-.container-navs .main-navbar ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
- main .container-topix-menus{
-    display: flex;    
-    height: 74px; 
-    font-size: 1.4rem;  
-    align-items: center;
-}
-
- main .container-navs .container-topix-menus .topix-menu {
-    display: flex;
-    flex-grow: 1;
-    max-width: 120rem;
-}
-
-main .main-navs .stocks-navbar {
-    display: flex;
-    height: 31.48px;
-    justify-content: center;
-}
-
-main ul {
-    list-style: none;
-}
-
-main .container-navs .stocks-carousel {
-    display: flex;            
-} */
-
+/*===== TOPICS (topix) NAV =====*/
 
 main .container-navs {
     display: flex;
-    flex-direction: column;    
-    margin: 0 auto;
-    flex-grow: 1;
-    /* flex-wrap: nowrap; */
+    flex-direction: column;      
 }
+
 .live {
     display: flex;
     align-items: center;    
@@ -275,7 +244,6 @@ main .container-navs {
     white-space: nowrap;
     height: 3.15rem;
     padding: .5rem;
-    font-size: 1.4rem;    
     width: 100%;
 }
 
@@ -287,8 +255,9 @@ main .container-navs {
     height: 18px;    
 }
 
+/*===== STOCKS (stox) NAV ======*/
+
 .container-stox-nav {
-    height: fit-content;    
     display: flex;
     justify-content: center;
 }
@@ -297,13 +266,57 @@ main .container-navs {
     display: flex;        
     overflow-x: hidden;
     width: 100%;    
-    max-width: 120rem;    
+    max-width: 120rem;
+    gap: 1rem;   
 }
 
 .stox-ul li {
     display: flex;
-    height: 3.15em;
-    padding: 1.3em 0.8em;
+    height: min-content;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 23px 10px 14px;
+    min-width: max-content;
+    white-space: nowrap;
+
+}
+.stox-ul li p {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stock-name {
+    font-weight: bold;
+  }
+
+  .stock-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem; 
+  }
+  
+  .down-tri {
+    border-top: 9px solid #e42918;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    width: 9px;
+    height: 9px;
+  }
+  
+  .up-tri {
+    border-bottom: 9px solid #0a8059;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    width: 9px;
+    height: 9px;
+  }
+  
+.down-stock {
+    color: #e42918;
+}
+
+.up-stock {
+    color: #0a8059;
 }
 
 a { 
@@ -432,6 +445,7 @@ aside .container-main-left {
 .topix {
     display: flex;
     font-size: 1.4rem;
+    padding: .5rem 0;
 }
 
 .container-main-left li .headline {
@@ -549,26 +563,26 @@ aside .container-main-left {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    margin-bottom:25px;
-    grid-gap: 25px;
+    margin-bottom:2.5rem;
+    grid-gap: 2.5rem;
 }
 
 .container-main-showcases-p1 li {
-    height: 278px;
+    height: 27.8rem;
     display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding-bottom:32;
+    padding:0 1rem 3.2rem;
 }
 
 .container-main-showcases-p1 li .topix {
-    margin-top: 5px;
+    margin-top: .5rem;
 }
 
 .container-main-showcases-p1 li h4 {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .container-main-showcases-p1 li:first-child,  
@@ -663,7 +677,7 @@ aside .container-main-left {
 }
 
 
-/* =====  MAIN CENTER SHOWCASES (visuals) - P1 ===== */
+/* =====  MAIN CENTER SHOWCASES (visuals) - P2 ===== */
 
 .container-showcases-p2 {
     max-width: 100%;
@@ -673,10 +687,6 @@ aside .container-main-left {
     grid-gap: 1em;
     grid-template-columns: repeat(4 1fr);
 }
-
-/* .container-showcases-flex {
-    display: flex;    
-} */
 
 .container-showcases-p2 ul {
     display: flex;
@@ -701,16 +711,14 @@ aside .container-main-left {
 }
 
 .showcases-p2 li {
-    /* height: 307.78px; */
     display: flex;
-    /* flex-grow: 1; */
     flex-direction: column;
     background-position: center center;
     background-size: cover; 
     background-repeat: no-repeat;  
     padding-bottom: 32px;
-    max-width:350px;
-    max-height: 281.85px;
+    max-width:35rem;
+    max-height: 28.1rem;
 }
 
 .showcases-p2 li h4 {
